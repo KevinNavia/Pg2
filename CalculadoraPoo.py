@@ -1,31 +1,23 @@
 class calculadora:
-    def __init__(self, a, b):
-        self.a = a
-        self.b = b
+    def __init__(self):
         self.operacion = ""
         self.resultado = 0
 
-    def sumar(self):
+    def sumar(self, a, b):
         self.operacion = "suma"
-        self.resultado = self.a + self.b
-        return self.mostrar_resultado()
-    def restar(self):
+        self.resultado = a + b
+        return self.mostrar_resultado(a, b)
+    def restar(self, a, b):
         self.operacion = "resta"
-        self.resultado = self.a - self.b
-        return self.mostrar_resultado()
-    def multiplicar(self):
+        self.resultado = a - b
+        return self.mostrar_resultado(a, b)
+    def multiplicar(self, a, b):
         self.operacion = "multiplicacion"
-        self.resultado = self.a * self.b
-        return self.mostrar_resultado()
-    def dividir(self):
+        self.resultado = a * b
+        return self.mostrar_resultado(a, b)
+    def dividir(self, a, b):
         self.operacion = "division"
-        self.resultado = self.a / self.b
-        return self.mostrar_resultado()
-    def mostrar_resultado(self):
-        return f"tu resultado de la operacion {self.operacion} es:  {self.resultado}"
-
-calculadora = calculadora(5, 2)
-print(calculadora.sumar())
-print(calculadora.restar())
-print(calculadora.multiplicar())
-print(calculadora.dividir())
+        self.resultado = a / b
+        return self.mostrar_resultado(a, b)
+    def mostrar_resultado(self, a, b):
+        return f"tu resultado de la operacion {self.operacion} entre {a} y {b} es:  {self.resultado}"
